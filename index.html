@@ -7,17 +7,46 @@
         background-color: bisque;
     }
 
-    header {
+    #header {
         position: fixe;
-        display: flex;
-        flex-direction: row;
+        padding: 10px;
+        background-color: beige;
     }
 
-    h1 {}
+    h1 {
+        font-family: 'Lato', sans-serif;
+        display: flex;
+        justify-content: center;
+        padding: 0 0 0 60px;
+        font-size: 190%;
+    }
 
     #nav-bar {
         display: flex;
+        flex-direction: column;
+        align-items: center;
     }
+
+    .nav-link {
+        text-decoration: none;
+        color: black;
+    }
+
+    @media (min-width: 500px) {
+        .header-nav>#header {
+            display: flex;
+        }
+
+        #nav-bar {
+            flex-direction: row;
+            justify-content: flex-end;
+            flex: 1;
+            align-items: center;
+            column-gap: 50px;
+            padding: 0 80px 0 0;
+        }
+    }
+
     h2 {
         display: flex;
         justify-content: center;
@@ -25,46 +54,81 @@
 
     #form {
         display: flex;
-        flex-direction: column;
-        width: fit-content;
-        height: fit-content;
         gap: 15px;
+        align-items: center;
         justify-content: center;
+        flex-direction: column;
     }
+
     #submit {
-            background-color: yellow;
-            width: fit-content;
-            height:fit-content;
-            border: 0px;
-        }
+        background-color: yellow;
+        border: 0px;
+    }
+
     #Features {
         display: flex;
         justify-content: center;
+        padding: 20px 20px 20px 20px;
     }
 
-    #How ir works {}
-
-    #pricing {}
+   /* #how-it-works {
+        display: flex;
+        justify-content: center;
+        padding: 20px 20px 20px 20px;
+    }*/
+/*
+    @media (min-width: 600px) {
+        #pricing {
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }*/
 
     .item-price {
+        box-sizing: border-box;
         border: 1px solid black;
         width: 300px;
         height: 300px;
     }
+
+    .price {
+        display: flex;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 130%;
+    }
+
     h3 {
         background-color: beige;
-        margin:0px;
-        padding: 0px 0px 20px 0px;
+        margin: 0px;
+        padding: 10px 0px;
         display: flex;
-       
+        text-align: center;
     }
+
     .button {
         background-color: yellow;
         border: 0px;
+        text-decoration: none;
+        color: black;
+        display: flex;
+        justify-content: center;
+        margin: 0 90px 0 90px;
     }
+
     #footer {
-     display: flex;
-     flex-direction: column-reverse;
+        display: flex;
+        flex-direction: column;
+        background-color: beige;
+        align-items: flex-end;
+        padding: 20px 20px 20px 20px;
+    }
+
+    .footer-text {
+        text-decoration: none;
+        color: black;
+      
     }
 </style>
 
@@ -76,16 +140,16 @@
 
 <body>
     <div class="page-container">
-        <header id="header">
-            <h1 class="header-logo">Smeg☕</h1>
-            <nav id="nav-bar">
-                <ul>
-                    <li class="nav-link"><a href="#Features">Features</a></li>
-                    <li class="nav-link"><a href="#How-it-works">How it works</a></li>
-                    <li class="nav-link"><a href="#Pricing">Pricing</a></li>
-                </ul>
-            </nav>
-        </header>
+        <nav class="header-nav">
+            <header id="header">
+                <h1 class="header-logo">Smeg☕</h1>
+                <nav id="nav-bar">
+                    <a href="#Features" class="nav-link">Features</a>
+                    <a href="#How-it-works" class="nav-link">How it works</a>
+                    <a href="#Pricing" class="nav-link">Pricing</a>
+                </nav>
+            </header>
+        </nav>
         <section class="better-day">
             <h2>Make every day better, Yourself!</h2>
             <form id="form" action="https://www.freecodecamp.com/email-submit">
@@ -122,7 +186,7 @@
                     <li class="about-item">Special Feature Programmable</li>
                     <li class="about-item">Coffee Maker Type Drip Coffee Machine</li>
                 </ul>
-                <button class="button">select</button>
+                <a href="#" class="button">select</a>
             </section>
             <section class="item-price">
                 <h3>Smeg DCF02WHUK Drip Coffee Machine, White</h3>
@@ -134,7 +198,7 @@
                     <li class="about-item">Special Features 1-4 cup function; 40-minute keep warm function;</li>
                     <li class="about-item">Coffee Maker Type Drip Coffee Machine</li>
                 </ul>
-                <button class="button">select</button>
+                <a href="#" class="button">select</a>
             </section>
             <section class="item-price">
                 <h3>Smeg Espresso Machine Black ECF01 BLUS</h3>
@@ -146,22 +210,14 @@
                     <li class="about-item">Special Feature Removable Tank, Cup Warmer</li>
                     <li class="about-item">Coffee Maker Type Espresso Machine</li>
                 </ul>
-                <button class="button">select</button>
+                <a href="#" class="button">select</a>
             </section>
         </div>
         <footer id="footer">
-            <ul>
-                <li class="footer-text">
-                    <a href="#">Privacy</a>
-                </li>
-                <li class="footer-text">
-                    <a href="#">Terms</a>
-                </li>
-                <li class="footer-text">
-                    <a href="#">Contacts</a>
-                </li>
-            </ul>
-            <span>Copyrights 2022, Smeg</span>
+            <a href="#" class="footer-text">Privacy</a>
+            <a href="#" class="footer-text">Terms</a>
+            <a href="#" class="footer-text">Contacts</a>
+            <span class="end-text">Copyrights 2022, Smeg</span>
         </footer>
     </div>
 </body>
