@@ -8,8 +8,10 @@
     }
 
     #header {
-        position: fixe;
-        padding: 10px;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        padding: 2px;
         background-color: beige;
     }
 
@@ -50,6 +52,7 @@
     h2 {
         display: flex;
         justify-content: center;
+        padding-top: 102px;
     }
 
     #form {
@@ -71,13 +74,13 @@
         padding: 20px 20px 20px 20px;
     }
 
-   /* #how-it-works {
+    #how-it-works {
         display: flex;
         justify-content: center;
-        padding: 20px 20px 20px 20px;
-    }*/
-/*
-    @media (min-width: 600px) {
+        padding: 20px 0 20px 0;
+    }
+
+    /*  @media (min-width: 600px) {
         #pricing {
             display: grid;
             grid-gap: 10px;
@@ -119,16 +122,17 @@
 
     #footer {
         display: flex;
-        flex-direction: column;
         background-color: beige;
-        align-items: flex-end;
-        padding: 20px 20px 20px 20px;
+        justify-content: flex-end;
+        padding: 0;
+        margin: 5px 0 0 0;
+        box-sizing: border-box;
     }
 
     .footer-text {
         text-decoration: none;
         color: black;
-      
+
     }
 </style>
 
@@ -214,10 +218,10 @@
             </section>
         </div>
         <footer id="footer">
-            <a href="#" class="footer-text">Privacy</a>
-            <a href="#" class="footer-text">Terms</a>
-            <a href="#" class="footer-text">Contacts</a>
-            <span class="end-text">Copyrights 2022, Smeg</span>
+                <a href="#" class="footer-text">Privacy</a>
+                <a href="#" class="footer-text">Terms</a>
+                <a href="#" class="footer-text">Contacts</a>
+            <span>Copyrights 2022, Smeg</span>
         </footer>
     </div>
 </body>
